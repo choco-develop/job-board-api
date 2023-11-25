@@ -34,4 +34,4 @@ app.get("/api/:name", (req, res) => {
 });
 
 app.use("/public", express.static(__dirname + "/public"));
-app.listen(Port, () => console.log("listening on port 3000"));
+app.listen(Port, () => console.log("listening on port 3000......go catch"));
