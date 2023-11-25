@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const Port = process.env.PORT || 3000;
+const cors = require("cors");
 
 const dataAnalyst = {
   senior: {
@@ -34,4 +35,5 @@ app.get("/api/:name", (req, res) => {
 });
 
 app.use("/public", express.static(__dirname + "/public"));
+app.use(cors());
 app.listen(Port, () => console.log("listening on port 3000......go catch"));
