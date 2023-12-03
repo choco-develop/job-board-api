@@ -1,15 +1,15 @@
 document.querySelector("button").addEventListener("click", apiRequest);
 
 async function apiRequest() {
-  const rapperName = document.querySelector("input").value;
+  const position = document.querySelector("input").value;
   try {
     const response = await fetch(
-      `https://job-board-lmpt.onrender.com/api/${rapperName}`
+      `https://job-board-lmpt.onrender.com/api/${position}`
     );
     const data = await response.json();
 
     console.log(data);
-    document.querySelector("h2").innerText = data.birthName;
+    document.querySelector("h2").innerText = data.name;
   } catch (error) {
     console.log(error);
   }
